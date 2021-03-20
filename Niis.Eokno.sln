@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Niis.Eokno.Domain", "src\Ni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Niis.Eokno.Selfhost", "src\Niis.Eokno.Selfhost\Niis.Eokno.Selfhost.csproj", "{AF64C290-2EBE-4747-A9A3-A94C60A461B7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Niis.Eokno.Autofac", "src\Niis.Eokno.Autofac\Niis.Eokno.Autofac.csproj", "{27C8E1C3-725C-478B-B575-C0DB1D030ACC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{AF64C290-2EBE-4747-A9A3-A94C60A461B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF64C290-2EBE-4747-A9A3-A94C60A461B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF64C290-2EBE-4747-A9A3-A94C60A461B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C8E1C3-725C-478B-B575-C0DB1D030ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C8E1C3-725C-478B-B575-C0DB1D030ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C8E1C3-725C-478B-B575-C0DB1D030ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C8E1C3-725C-478B-B575-C0DB1D030ACC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
