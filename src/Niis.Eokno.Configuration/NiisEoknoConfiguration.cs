@@ -2,34 +2,34 @@
 
 namespace Niis.Eokno.Configuration
 {
-    public class NiisEoknoConfiguration : ConfigurationSection
-    {
-        /// <summary>
-        ///     Названия секции.
-        /// </summary>
-        public const string SectionName = "NiisEoknoSettings";
+	public class NiisEoknoConfiguration : ConfigurationSection
+	{
+		/// <summary>
+		///     Названия секции.
+		/// </summary>
+		public const string SectionName = "niisEoknoSettings";
 
-        private const string WebAddressKey = "webAddress";
-        private const string ConnectionStringKey = "connectionString";
+		private const string WebAddressKey = "webAddress";
+		private const string ConnectionStringKey = "connectionString";
 
-        /// <summary>
-        ///     Адрес сервиса.
-        /// </summary>
-        [ConfigurationProperty(WebAddressKey, IsRequired = true)]
-        public string WebAddress
-        {
-            get => this[WebAddressKey].ToString();
-            set => this[WebAddressKey] = value;
-        }
+		/// <summary>
+		///     Адрес сервиса.
+		/// </summary>
+		[ConfigurationProperty(WebAddressKey, IsRequired = true)]
+		public string WebAddress
+		{
+			get => this[WebAddressKey].ToString();
+			set => this[WebAddressKey] = value;
+		}
 
-        /// <summary>
-        ///     Строка подключения к базе данных.
-        /// </summary>
-        [ConfigurationProperty(ConnectionStringKey, IsRequired = true)]
-        public string ConnectionString
-        {
-            get => this[ConnectionStringKey].ToString();
-            set => this[ConnectionStringKey] = value;
-        }
-    }
+		/// <summary>
+		///     Строка подключения к базе данных.
+		/// </summary>
+		[ConfigurationProperty(ConnectionStringKey, IsRequired = true)]
+		public string ConnectionString
+		{
+			get => this[ConnectionStringKey].ToString();
+			set => this[ConnectionStringKey] = value;
+		}
+	}
 }

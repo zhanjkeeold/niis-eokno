@@ -1,35 +1,28 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Xml.Linq;
 
-namespace Niis.Eokno.Abstractions.Dtos
+namespace Niis.Eokno.Abstractions.Responses
 {
-    [DataContract(Name = "response")]
-    public class Response<T> where T : class
-    {
-        public Response()
-        {
+	/// <summary>
+	///		Ответ.
+	/// </summary>
+	[DataContract(Namespace = Global.Empty)]
+	public class Response
+	{
+		/// <summary>
+		///		Информация об ответе.
+		/// </summary>
+		[DataMember(
+			Order = 0,
+			Name = "responseInfo")]
+		public ResponseInfo ResponseInfo { get; set; }
 
-        }
-
-        public Response(int code, string message, string sessionId)
-        {
-            ResponseInfo = new ResponseInfo
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                ResponseDate = DateTime.Now,
-                SessionId = sessionId,
-                Status = new Status
-                {
-                    Code = code,
-                    Message = message
-                }
-            };
-        }
-
-        [DataMember(Name = "responseInfo")]
-        public ResponseInfo ResponseInfo { get; set; }
-
-        [DataMember(Name = "responseData")]
-        public T ResponseData { get; set; }
-    }
+		/// <summary>
+		///		Объект "данные ответа".
+		/// </summary>
+		[DataMember(
+			Order = 1,
+			Name = "responseData")]
+		public XElement ResponseData { get; set; }
+	}
 }

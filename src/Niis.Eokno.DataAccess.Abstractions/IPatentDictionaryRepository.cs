@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Niis.Eokno.DataAccess.Abstractions
 {
-    public interface IPatentDictionaryRepository
-    {
-        IReadOnlyCollection<PatentDictionary> GetAll();
+	public interface IPatentDictionaryRepository
+	{
+		IReadOnlyCollection<PatentDictionary> GetAll();
 
-        Task<IReadOnlyCollection<PatentDictionary>> GetAllAsync(CancellationToken cancellationToken = default);
-    }
+		Task<IReadOnlyCollection<PatentDictionary>> GetAllAsync(CancellationToken cancellationToken = default);
+	}
 }

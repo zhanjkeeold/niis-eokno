@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Niis.Eokno.DataAccess.Abstractions
 {
-    public interface ITrademarkDictionaryRepository
-    {
-        IReadOnlyCollection<TrademarkClassification> GetAll();
+	public interface ITrademarkDictionaryRepository
+	{
+		IReadOnlyCollection<TrademarkClassification> GetAll();
 
-        Task<IReadOnlyCollection<TrademarkClassification>> GetAllAsync(CancellationToken cancellationToken = default);
-    }
+		Task<IReadOnlyCollection<TrademarkClassification>> GetAllAsync(CancellationToken cancellationToken = default);
+	}
 }

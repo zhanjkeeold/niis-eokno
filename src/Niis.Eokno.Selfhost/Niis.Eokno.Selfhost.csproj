@@ -1,8 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net462</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net462</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Autofac" Version="6.2.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+		<PackageReference Include="Serilog" Version="2.10.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+		<PackageReference Include="Topshelf" Version="4.3.0" />
+		<PackageReference Include="Topshelf.Autofac" Version="4.0.1" />
+		<PackageReference Include="Topshelf.Serilog" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Niis.Eokno.Autofac\Niis.Eokno.Autofac.csproj" />
+	  <ProjectReference Include="..\Niis.Eokno.Configuration\Niis.Eokno.Configuration.csproj" />
+	  <ProjectReference Include="..\Niis.Eokno.DataAccess.Autofac\Niis.Eokno.DataAccess.Autofac.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="App.config">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 
 </Project>
